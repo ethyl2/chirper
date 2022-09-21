@@ -24,6 +24,7 @@ const form = useForm({
             class="block w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"></textarea>
           <InputError :message="form.errors.message" class="mt-2" />
           <input type="text" v-model="form.color" placeholder="border color" class="mt-4 border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"/>
+          <InputError :message="form.errors.color" class="mt-2" />
           <PrimaryButton class="mt-4 w-24 text-center flex items-center justify-center">Chirp</PrimaryButton>
         </form>
 
