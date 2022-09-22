@@ -58,6 +58,9 @@ class ChirpPolicy
 
     /**
      * Determine whether the user can delete the model.
+     * Rather than repeating the logic from the update method,
+     * we can define the same logic by calling the update method
+     * from our destroy method.
      *
      * @param  \App\Models\User  $user
      * @param  \App\Models\Chirp  $chirp
@@ -65,7 +68,7 @@ class ChirpPolicy
      */
     public function delete(User $user, Chirp $chirp)
     {
-        //
+        return $this->update($user, $chirp);
     }
 
     /**
@@ -77,7 +80,7 @@ class ChirpPolicy
      */
     public function restore(User $user, Chirp $chirp)
     {
-        //
+
     }
 
     /**
